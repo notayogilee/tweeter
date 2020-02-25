@@ -5,23 +5,61 @@
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      type="text/css"
+    />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <!-- Font awesome icons -->
+    <script
+      src="https://kit.fontawesome.com/1ad66179be.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <div class="logo">
+        <h2><span>tweeter</span></h2>
+      </div>
+      <div class="tweet">
+        <p><strong>Write</strong> a new tweet</p>
+        <i class="fas fa-angle-double-down"></i>
+      </div>
     </nav>
+
+    <header>
+      <div class="avatar">
+        <img src="images/profile-hex.png" />
+      </div>
+      <br />
+      <div class="name">
+        <h2>Lee <span class="last-name">Castelani</span></h2>
+      </div>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container"></main>

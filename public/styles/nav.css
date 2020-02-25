@@ -1,0 +1,30 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em;
+  font-family: "Source Sans Pro", 300;
+  background-color: #4056a1;
+  color: #ffffff;
+  position: fixed;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
+}
+
+nav .logo {
+  font-family: "Bungee";
+}
+nav .tweet {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+nav .tweet p {
+  margin: 0;
+}
+
+.tweet i {
+  color: red;
+  text-align: center;
+}

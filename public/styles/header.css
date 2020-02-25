@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgb(216, 152, 32);
+  height: 520px;
+  width: 100%;
+}
+
+header img {
+  height: 256px;
+  width: 256px;
+}
+
+header .name h2 {
+  margin-top: 0;
+  color: #f4f1ec;
+}
+
+header .last-name {
+  font-weight: normal;
+}
