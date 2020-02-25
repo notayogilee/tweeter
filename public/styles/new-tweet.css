@@ -1,0 +1,28 @@
+.container input {
+  background-color: #4056a1;
+  color: #ffffff;
+  font-family: "Bungee";
+  text-align: left;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+}
+
+main form .counter {
+  font-family: "Bungee";
+  text-align: right;
+}
+
+.container textarea {
+  border: none;
+  background-color: #f4f1ec;
+  color: #545149;
+  font-weight: 500;
+}
+
+main .tweet-footer {
+  display: flex;
+  justify-content: space-between;
+}

@@ -24,5 +24,19 @@ body {
 }
 
 /*
+*Main
+*/
+
+.container {
+  justify-content: space-around;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: #545149;
+  background-color: #f4f1ec;
+  font-family: "Source Sans Pro";
+}
+
+/*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
