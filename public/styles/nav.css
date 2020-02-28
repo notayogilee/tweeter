@@ -15,16 +15,16 @@ nav {
 nav .logo {
   font-family: "Bungee";
 }
-nav .tweet {
+nav .tweet-logo {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
-nav .tweet p {
+nav .tweet-logo p {
   margin: 0;
 }
 
-.tweet i {
+.tweet-logo i {
   color: red;
   text-align: center;
 }

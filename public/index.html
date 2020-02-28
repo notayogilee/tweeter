@@ -24,6 +24,9 @@
      <!-- New Tweet CSS -->
      <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!-- Tweet container -->
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css">
+     
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
@@ -52,13 +55,13 @@
       <div class="logo">
         <h2><span>tweeter</span></h2>
       </div>
-      <div class="tweet">
+      <div class="tweet-logo">
         <p><strong>Write</strong> a new tweet</p>
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
 
-    <header>
+    <header class="main-header">
       <div class="avatar">
         <img src="images/profile-hex.png" />
       </div>
@@ -82,6 +85,24 @@
          </form>
       </section>
     </main>
+    <article class="tweet">
+      <header>
+        <div class="tweet-user">
+          <i class="far fa-smile-wink fa-2x"></i>
+          <h3>Ninja Lee</h3>
+        </div>
+        <h5>@NinjaLee</h5>
+      </header>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit quod non laborum, ratione adipisci incidunt qui sint quibusdam exercitationem blanditiis.</p>
+        <footer>
+          <h6>10 days ago</h6>
+          <div class="icons">
+            <i class="fas fa-flag fa-xs"></i>
+            <i class="fas fa-retweet fa-xs"></i>
+            <i class="fas fa-heart fa-xs"></i>
+          </div>
+        </footer>
+    </article>
   </body>
 </html>
 

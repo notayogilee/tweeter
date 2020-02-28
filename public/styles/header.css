@@ -1,4 +1,4 @@
-header {
+.main-header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -8,16 +8,16 @@ header {
   width: 100%;
 }
 
-header img {
+.main-header img {
   height: 256px;
   width: 256px;
 }
 
-header .name h2 {
+.main-header .name h2 {
   margin-top: 0;
   color: #f4f1ec;
 }
 
-header .last-name {
+.main-header .last-name {
   font-weight: normal;
 }
