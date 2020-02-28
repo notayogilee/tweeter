@@ -11,15 +11,36 @@ main form {
 }
 
 main form .counter {
+  /* color: red; */
   font-family: "Bungee";
   text-align: right;
 }
 
+main form .red {
+  color: red;
+}
+
 .container textarea {
-  border: none;
-  background-color: #f4f1ec;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  outline: none;
+  font-weight: 700;
+  font-family: "Source Sans Pro";
   color: #545149;
-  font-weight: 500;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-color: #545149;
+  border-bottom-width: 5px;
+  margin-bottom: 10px;
+  background-color: #f4f1ec;
+}
+
+.container textarea::placeholder {
+  color: #545149;
+  font-weight: 700;
+  font-family: "Source Sans Pro";
 }
 
 main .tweet-footer {
