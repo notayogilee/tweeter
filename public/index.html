@@ -4,7 +4,6 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
-
     <!-- External CSS -->
     <link
       rel="stylesheet"
@@ -21,12 +20,12 @@
     <!-- Header CSS -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-     <!-- New Tweet CSS -->
-     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <!-- New Tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- Tweet container -->
-    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css">
-     
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
@@ -40,7 +39,10 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
 
     <!-- Composer-char-count.js -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
 
     <!-- Font awesome icons -->
     <script
@@ -68,33 +70,40 @@
       <br />
       <div class="name">
         <h2>Lee <span class="last-name">Castelani</span></h2>
-      
       </div>
     </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-       <h2>Compose Tweet</h2> 
-         <form action="/tweets" method="POST">
-           <textarea class="new-user-tweet" name="text" placeholder="What are you humming about?"></textarea>
+        <h2>Compose Tweet</h2>
+        <form class="submit-tweet" action="/tweets" method="POST">
+          <textarea
+            class="new-user-tweet"
+            name="text"
+            placeholder="What are you humming about?"
+          ></textarea>
           <div class="tweet-footer">
-            <input type="submit" value="Tweet">
+            <input type="submit" value="Tweet" />
             <span class="counter">140</span>
           </div>
-         </form>
+        </form>
       </section>
-   
-    <div id="tweet-container">
-      <article class="tweet">
-        <header>
-          <div class="tweet-user">
-            <i class="far fa-smile-wink fa-2x"></i>
-            <h3>Ninja Lee</h3>
-          </div>
-          <h5>@NinjaLee</h5>
-        </header>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit quod non laborum, ratione adipisci incidunt qui sint quibusdam exercitationem blanditiis.</p>
+
+      <div id="tweet-container">
+        <!-- <article class="tweet">
+          <header>
+            <div class="tweet-user">
+              <i class="far fa-smile-wink fa-2x"></i>
+              <h3>Ninja Lee</h3>
+            </div>
+            <h5>@NinjaLee</h5>
+          </header>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit quod
+            non laborum, ratione adipisci incidunt qui sint quibusdam
+            exercitationem blanditiis.
+          </p>
           <footer>
             <h6>10 days ago</h6>
             <div class="icons">
@@ -103,13 +112,8 @@
               <i class="fas fa-heart fa-xs"></i>
             </div>
           </footer>
-      </article>
-    </div>
+        </article> -->
+      </div>
     </main>
-
-
-    
-
   </body>
 </html>
-

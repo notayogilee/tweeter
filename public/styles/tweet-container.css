@@ -3,7 +3,7 @@
    flex-direction: column;
    background-color: #f4f1ec;
    border: 5px solid #545149;
-   margin: 5%;
+   margin: 20px 0 20px 0;
    padding: 0 20px 0 20px;
 }
 
@@ -36,6 +36,7 @@
 .tweet p {
 color: #545149;
 font-weight: 700;
+align-self: start;
 
 }
 

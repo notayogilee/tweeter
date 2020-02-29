@@ -6,11 +6,47 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(function() {
+$(document).ready(function () {
 
-  const createTweetElement = function(tweetData) {
-  
-  
+  $('.submit-tweet').submit(function (event) {
+    event.preventDefault();
+    console.log('Button Clicked, Ajaxing...');
+
+    const $textLength = $(this).serialize().length;
+    if ($textLength > 145) {
+      alert('Please do not tweet more than 140 characters');
+    } else if ($textLength < 6) {
+      alert('Please enter a tweet');
+    } else {
+      const $text = $(this).serialize();
+      const $form = $(this);
+
+      $.ajax({
+        url: '/tweets',
+        type: 'POST',
+        data: $text
+      }).then(function (result) {
+        console.log('Successfully Ajaxed!');
+        loadTweets();
+        document.getElementsByClassName('submit-tweet')[0].reset();
+        document.getElementsByClassName('counter')[0].textContent = 140;
+      })
+    }
+  });
+
+  const loadTweets = function () {
+    $.ajax({
+      url: '/tweets',
+      type: 'GET',
+      data: 'json'
+    }).then(function (result) {
+      renderTweets(result);
+    })
+  }
+
+
+  const createTweetElement = function (tweetData) {
+
     const $tweet = `
      <article class="tweet">
     <header>
@@ -31,27 +67,16 @@ $(document).ready(function() {
       </footer>
    </article>
     `;
-    console.log($tweet);
+
     return $tweet;
   }
-  const tweetData = 
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
+
+  const renderTweets = function (tweets) {
+    for (let tweetData of tweets) {
+
+      const $tweet = createTweetElement(tweetData);
+      $('#tweet-container').append($tweet);
+    }
   }
-  
-  const $tweet = createTweetElement(tweetData);
-  
-  console.log($tweet);
-  
-  
-  $('#tweet-container').append($tweet);
+
 });
