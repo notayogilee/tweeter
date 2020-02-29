@@ -44,6 +44,9 @@
       src="/scripts/composer-char-counter.js"
     ></script>
 
+    <!-- Hide-from.js -->
+    <script type="text/javascript" src="/scripts/hide-form.js"></script>
+
     <!-- Font awesome icons -->
     <script
       src="https://kit.fontawesome.com/1ad66179be.js"
@@ -57,10 +60,12 @@
       <div class="logo">
         <h2><span>tweeter</span></h2>
       </div>
-      <div class="tweet-logo">
-        <p><strong>Write</strong> a new tweet</p>
-        <i class="fas fa-angle-double-down"></i>
-      </div>
+      <a href="" class="toggle-form">
+        <div class="tweet-logo">
+          <p><strong>Write</strong> a new tweet</p>
+          <i class="fas fa-angle-double-down"></i>
+        </div>
+      </a>
     </nav>
 
     <header class="main-header">
@@ -90,30 +95,7 @@
         </form>
       </section>
 
-      <div id="tweet-container">
-        <!-- <article class="tweet">
-          <header>
-            <div class="tweet-user">
-              <i class="far fa-smile-wink fa-2x"></i>
-              <h3>Ninja Lee</h3>
-            </div>
-            <h5>@NinjaLee</h5>
-          </header>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit quod
-            non laborum, ratione adipisci incidunt qui sint quibusdam
-            exercitationem blanditiis.
-          </p>
-          <footer>
-            <h6>10 days ago</h6>
-            <div class="icons">
-              <i class="fas fa-flag fa-xs"></i>
-              <i class="fas fa-retweet fa-xs"></i>
-              <i class="fas fa-heart fa-xs"></i>
-            </div>
-          </footer>
-        </article> -->
-      </div>
+      <div id="tweet-container"></div>
     </main>
   </body>
 </html>

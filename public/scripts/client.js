@@ -19,6 +19,9 @@ $(document).ready(function () {
       alert('Please enter a tweet');
     } else {
       const $text = $(this).serialize();
+      $('submit-tweet').text($text);
+
+
       const $form = $(this);
 
       $.ajax({
@@ -47,6 +50,8 @@ $(document).ready(function () {
 
   const createTweetElement = function (tweetData) {
 
+    // const safeHTML = `<p>${escape(tweetData.user.text)}</p>`;
+
     const $tweet = `
      <article class="tweet">
     <header>
@@ -56,7 +61,8 @@ $(document).ready(function () {
       </div>
       <h5>${tweetData.user.handle}</h5>
     </header>
-  <p>${tweetData.content.text}</p>
+  <p>${escape(tweetData.content.text)}</p>
+      
       <footer>
         <h6>${tweetData.created_at}</h6>
         <div class="icons">
@@ -72,11 +78,20 @@ $(document).ready(function () {
   }
 
   const renderTweets = function (tweets) {
+    $('#tweet-container').empty();
+
     for (let tweetData of tweets) {
 
       const $tweet = createTweetElement(tweetData);
-      $('#tweet-container').append($tweet);
+      $('#tweet-container').prepend($tweet);
+
     }
+  }
+
+  const escape = function (str) {
+    let paragraph = document.createElement('p');
+    paragraph.appendChild(document.createTextNode(str));
+    return paragraph.innerHTML;
   }
 
 });
