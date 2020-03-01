@@ -3,7 +3,18 @@
   color: #ffffff;
   font-family: "Bungee";
   text-align: left;
+}
 
+.scroll-out {
+  position: relative;
+  transform: translateY(210px);
+  transition-duration: 400ms;
+}
+
+.new-tweet {
+  position: relative;
+  margin-top: -210px;
+  transition-duration: 400ms;
 }
 
 main form {
@@ -12,7 +23,6 @@ main form {
 }
 
 main form .counter {
-  
   font-family: "Bungee";
   text-align: right;
 }

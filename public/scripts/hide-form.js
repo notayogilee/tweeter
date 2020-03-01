@@ -1,9 +1,13 @@
-document.ready(function () {
+$(document).ready(function () {
 
-  $('.toggle-form').click(function () {
-    $('.new-tweet').hide('slow', function () {
+  $('.tweet-logo').on('click', function (e) {
+    $('section').toggleClass('scroll-out');
+    $('#tweet-container').toggleClass('scroll-out');
+    e.preventDefault();
+  });
+  $('input').on('click', function () {
+    $('section').toggleClass('scroll-out');
+    $('#tweet-container').toggleClass('scroll-out');
 
-    })
   })
-
-})
+});
