@@ -1,13 +1,15 @@
 $(document).ready(function () {
 
-  $('.tweet-logo').on('click', function (e) {
+  $('.tweet-logo').click(function (e) {
     $('section').toggleClass('scroll-out');
     $('#tweet-container').toggleClass('scroll-out');
     e.preventDefault();
-  });
-  $('input').on('click', function () {
+  })
+  $('input').click(function () {
     $('section').toggleClass('scroll-out');
     $('#tweet-container').toggleClass('scroll-out');
-
+  })
+  $('.tweet-logo').hover(function () {
+    $('.fa-angle-double-down').toggleClass('fa-lg transition');
   })
 });

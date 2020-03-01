@@ -20,15 +20,16 @@ nav a {
   text-decoration: none;
 }
 
-.tweet-logo:last-child:hover {
-  size: 2em;
-  color: yellow;
+.transition {
+  transition-duration: 400ms;
+  transform: translateY(10px);
 }
 
 nav .tweet-logo {
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: 60px;
 }
 nav .tweet-logo p {
   color: #ffffff;
@@ -38,4 +39,5 @@ nav .tweet-logo p {
 .tweet-logo i {
   color: red;
   text-align: center;
+  transition-duration: 500ms;
 }
