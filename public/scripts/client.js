@@ -1,6 +1,6 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
-  $('.submit-tweet').submit(function (event) {
+  $('.submit-tweet').submit(function(event) {
     event.preventDefault();
     console.log('Button Clicked, Ajaxing...');
 
@@ -11,7 +11,7 @@ $(document).ready(function () {
       $('section').addClass('scroll-out');
       $('#tweet-container').addClass('scroll-out');
       $('.error2').slideDown().removeClass('hidden');
-      $('.submit-tweet').keydown(function () {
+      $('.submit-tweet').keydown(function() {
 
         $('.error2').slideUp().addClass('hidden');
       });
@@ -20,9 +20,9 @@ $(document).ready(function () {
       $('section').addClass('scroll-out');
       $('#tweet-container').addClass('scroll-out');
       $('.error1').slideDown().removeClass('hidden');
-      $('.submit-tweet').keypress(function () {
+      $('.submit-tweet').keypress(function() {
         $('.error1').slideUp().addClass('hidden');
-      })
+      });
 
     } else {
       $('.error1').addClass('hidden');
@@ -31,32 +31,30 @@ $(document).ready(function () {
       const $text = $(this).serialize();
       $('submit-tweet').text($text);
 
-      const $form = $(this);
-
       $.ajax({
         url: '/tweets',
         type: 'POST',
         data: $text
-      }).then(function (result) {
+      }).then(function(result) {
         console.log('Successfully Ajaxed!');
         loadTweets();
         document.getElementsByClassName('submit-tweet')[0].reset();
         document.getElementsByClassName('counter')[0].textContent = 140;
-      })
+      });
     }
   });
 
-  const loadTweets = function () {
+  const loadTweets = function() {
     $.ajax({
       url: '/tweets',
       type: 'GET',
       data: 'json'
-    }).then(function (result) {
+    }).then(function(result) {
       renderTweets(result);
-    })
-  }
+    });
+  };
 
-  const createTweetElement = function (tweetData) {
+  const createTweetElement = function(tweetData) {
     let currentDate = Date.now();
     let $tweet = `
      <article class="tweet">
@@ -81,9 +79,9 @@ $(document).ready(function () {
     `;
 
     return $tweet;
-  }
+  };
 
-  const renderTweets = function (tweets) {
+  const renderTweets = function(tweets) {
     $('#tweet-container').empty();
 
     for (let tweetData of tweets) {
@@ -92,13 +90,13 @@ $(document).ready(function () {
       $('#tweet-container').prepend($tweet);
 
     }
-  }
+  };
 
-  const escape = function (str) {
+  const escape = function(str) {
 
     let paragraph = document.createElement('p');
     paragraph.appendChild(document.createTextNode(str));
     return paragraph.innerHTML;
 
-  }
+  };
 });
