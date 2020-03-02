@@ -1,26 +1,35 @@
-// import { json } from "body-parser";
-
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(document).ready(function () {
 
   $('.submit-tweet').submit(function (event) {
     event.preventDefault();
     console.log('Button Clicked, Ajaxing...');
 
-    const $textLength = $(this).serialize().length;
+    const $textLength = $(this).serialize().replace(/%20/g, ' ').length;
+
     if ($textLength > 145) {
-      alert('Please do not tweet more than 140 characters');
+
+      $('section').addClass('scroll-out');
+      $('#tweet-container').addClass('scroll-out');
+      $('.error2').slideDown().removeClass('hidden');
+      $('.submit-tweet').keydown(function () {
+
+        $('.error2').slideUp().addClass('hidden');
+      });
+
     } else if ($textLength < 6) {
-      alert('Please enter a tweet');
+      $('section').addClass('scroll-out');
+      $('#tweet-container').addClass('scroll-out');
+      $('.error1').slideDown().removeClass('hidden');
+      $('.submit-tweet').keypress(function () {
+        $('.error1').slideUp().addClass('hidden');
+      })
+
     } else {
+      $('.error1').addClass('hidden');
+      $('.error2').addClass('hidden');
+
       const $text = $(this).serialize();
       $('submit-tweet').text($text);
-
 
       const $form = $(this);
 
@@ -47,12 +56,9 @@ $(document).ready(function () {
     })
   }
 
-
   const createTweetElement = function (tweetData) {
-
-    // const safeHTML = `<p>${escape(tweetData.user.text)}</p>`;
-
-    const $tweet = `
+    let currentDate = Date.now();
+    let $tweet = `
      <article class="tweet">
     <header>
       <div class="tweet-user">
@@ -64,7 +70,7 @@ $(document).ready(function () {
   <p>${escape(tweetData.content.text)}</p>
       
       <footer>
-        <h6>${tweetData.created_at}</h6>
+        <h6> ${Math.floor((currentDate - tweetData.created_at) / 86400000)} days ago</h6>
         <div class="icons">
           <i class="fas fa-flag fa-xs"></i>
           <i class="fas fa-retweet fa-xs"></i>
@@ -89,9 +95,10 @@ $(document).ready(function () {
   }
 
   const escape = function (str) {
+
     let paragraph = document.createElement('p');
     paragraph.appendChild(document.createTextNode(str));
     return paragraph.innerHTML;
-  }
 
+  }
 });

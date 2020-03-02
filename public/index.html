@@ -4,6 +4,11 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+
     <!-- External CSS -->
     <link
       rel="stylesheet"
@@ -47,9 +52,6 @@
     <!-- Hide-from.js -->
     <script type="text/javascript" src="/scripts/hide-form.js"></script>
 
-    <!-- Error-messages.js -->
-    <script type="text/javascript" src="/scripts/error-messages.js"></script>
-
     <!-- Font awesome icons -->
     <script
       src="https://kit.fontawesome.com/1ad66179be.js"
@@ -84,9 +86,13 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <p class="error1 hidden">Please enter a tweet</p>
+        <p class="error2 hidden">Maximum of 140 characters per tweet</p>
         <h2>Compose Tweet</h2>
         <form class="submit-tweet" action="/tweets" method="POST">
           <textarea
+            autofocus
+            cols="70"
             class="new-user-tweet"
             name="text"
             placeholder="What are you humming about?"

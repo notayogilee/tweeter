@@ -17,6 +17,17 @@
   transition-duration: 400ms;
 }
 
+.error1,
+.error2 {
+  border: solid red 3px;
+  color: red;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
 main form {
   display: flex;
   flex-direction: column;
@@ -32,6 +43,7 @@ main form .red {
 }
 
 .container textarea {
+  overflow-wrap: break-word;
   resize: none;
   height: 100%;
   width: 100%;
@@ -57,4 +69,13 @@ main form .red {
 main .tweet-footer {
   display: flex;
   justify-content: space-between;
+}
+
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    margin-top: -90px;
+  }
+  .scroll-out {
+    transform: translateY(210px);
+  }
 }

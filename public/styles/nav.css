@@ -41,3 +41,9 @@ nav .tweet-logo p {
   text-align: center;
   transition-duration: 500ms;
 }
+
+@media only screen and (max-width: 1023px) {
+  nav {
+    background-color: rgb(216, 152, 32);
+  }
+}
