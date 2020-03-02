@@ -17,7 +17,8 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 
 ## Screenshots
-
+Laptop view of app
 !['Laptop view of app'](https://github.com/notayogilee/tweeter/blob/f3b7f3f8371b63378ca1ed2e496bce7427c32b5e/docs/Laptop-view.png?raw=true)
 
+Tablet view of app
 !['Tablet view'](https://github.com/notayogilee/tweeter/blob/f3b7f3f8371b63378ca1ed2e496bce7427c32b5e/docs/Tablet-view.png?raw=true)
